@@ -1,4 +1,6 @@
-// # The band name exercises
+// # Refactor band name
+
+const bandArray = [];
 
 function bandName(clothesColor, foodEaten) {
   const colorInitialInCaps =
@@ -8,7 +10,9 @@ function bandName(clothesColor, foodEaten) {
 
   const generateBandName = `The ${colorInitialInCaps} ${foodInitialInCaps}!`;
 
-  return generateBandName;
+  bandArray.push(generateBandName);
+
+  return bandArray;
 }
 
 console.log(bandName("brown", "cake"));
