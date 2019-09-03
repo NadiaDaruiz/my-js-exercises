@@ -1,4 +1,4 @@
-# JS Exercisses
+# JS Exercises
 
 ## 1. Write a function called generateBandName.
 
