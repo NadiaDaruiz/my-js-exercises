@@ -58,10 +58,10 @@ const bandArray = [];
 // # 4. A single function call twice
 
 function bandName(clothingColor, foodEaten) {
-  let band = `The ${capitalizeInitial(clothingColor)} ${capitalizeInitial(
-    foodEaten
-  )}!`;
+  const color = capitalizeInitial(clothingColor);
+  const food = capitalizeInitial(foodEaten);
 
+  const band = `The ${makeTasty(color)} ${food}!`;
   bandArray.push(band);
 
   return band;
@@ -71,8 +71,37 @@ function capitalizeInitial(rawString) {
   return rawString[0].toUpperCase() + rawString.substring(1).toLowerCase();
 }
 
-console.log(bandName("brown", "cake"));
-bandName("blue", "paprika");
-console.log(bandArray);
-
 // # 5. MakeTasty with switch statements
+
+function makeTasty(color) {
+  let embellishColor = "";
+
+  switch (color) {
+    case "Red":
+    case "red":
+      return "Chili";
+    case "Orange":
+    case "orange":
+      return "Tangerine";
+    case "Yellow":
+    case "yellow":
+      return "Pineapple";
+    case "Green":
+    case "green":
+      return "Sage";
+    case "Blue":
+    case "blue":
+      return "Blueberry";
+    case "Purple":
+    case "purple":
+      return "Plum";
+  }
+
+  return embellishColor;
+}
+
+console.log(bandName("blue", "cake"));
+console.log(bandName("greeN", "paprika"));
+console.log(bandArray);
+console.log(bandName("orange", "cookie"));
+console.log(bandArray);
