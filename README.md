@@ -1,6 +1,7 @@
 # JS Exercises
+## Band Name exercise
 
-## 1. Write a function called generateBandName.
+### 1. Write a function called generateBandName.
 
 It should accept two parameters: clothingColour and lastFoodEaten
 
