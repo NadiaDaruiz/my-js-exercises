@@ -67,4 +67,3 @@ dash();
 
 const asteric = () => {};
 console.log("\nExercise 3");
-asteric();

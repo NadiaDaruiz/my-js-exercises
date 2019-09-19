@@ -148,6 +148,11 @@ console.log("\n  Exercise 8-Bonus");
 greetingBonus();
 
 //9.
+const fourInOne = () => {
+    for
+};
+console.log("\n  Exercise 9");
+fourInOne();
 //10.
 const palindrome = () => {};
 console.log("\n  Exercise 10");
