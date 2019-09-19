@@ -117,6 +117,7 @@ const repeatIt = () => {
     ++times;
     console.log(item);
   } while (times < 5);
+
   // times is LESS than 5 (<), times is GREATER than 5 (>)
 };
 console.log("\n  Exercise 4");
