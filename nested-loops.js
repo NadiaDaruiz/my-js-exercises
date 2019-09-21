@@ -65,5 +65,19 @@ dash();
 // ***
 // ****
 
-const asteric = () => {};
+const asterisk = () => {
+  let star = "";
+  for (let i = 0; i < 4; i += 1) {
+    star += "*";
+    console.log(star);
+  }
+};
 console.log("\nExercise 3");
+asterisk();
+
+//#4
+// The Goal
+
+//   *
+//  ***
+// *****
