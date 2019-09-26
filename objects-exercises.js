@@ -1,6 +1,6 @@
 //#1. Given the following nested objects:
 
-// ##1.a
+// ##1.
 
 const nestedObject = {
   speakers: [{ name: "Elie" }, { name: "Tim" }, { name: "Matt" }],
@@ -27,19 +27,19 @@ const nestedObject = {
 };
 
 /*
-1 - Write a function addSpeaker to add a speaker to the array of speakers.
+a - Write a function addSpeaker to add a speaker to the array of speakers.
 The speaker you add must be an object with a key of name and a value of whatever you’d like.
 
-2 - Write a function addLanguage that adds a language to the languages object.
+b - Write a function addLanguage that adds a language to the languages object.
 The language object you add should have a key with the name of the language and the value of another object
 with a key of “hello” and a value of however you spell “hello” in the language you add.
 
-3 - Write a function addCountry that adds a European country to the countries object(inside of the continents object,
+c - Write a function addCountry that adds a European country to the countries object(inside of the continents object,
 inside of the countries object).The country you add should be an object with the key as name of the country and
 the value as an object with the keys of “capital” and “population” and their respective values.
 */
 
-// ##2.b
+// ##2.
 
 const nestedData = {
   innerData: {
@@ -57,13 +57,13 @@ const nestedData = {
 };
 
 /*
-1 - Using a for loop, console.log all of the numbers in the primeNumbers array.
+a - Using a for loop, console.log all of the numbers in the primeNumbers array.
 
-2 - Using a for loop, console.log all of the even Fibonnaci numbers.
+b - Using a for loop, console.log all of the even Fibonnaci numbers.
 
-3 - Console.log the value “second” inside the order array.
+c - Console.log the value “second” inside the order array.
 
-4 - Inside of the addSnack function there is a special keyword called this.
+d - Inside of the addSnack function there is a special keyword called this.
 What does the word this refer to inside the addSnack function?
 */
 
@@ -76,6 +76,7 @@ const primeLoop = () => {
     console.log(nestedData.innerData.numberData.primeNumbers[i]);
   }
 };
+console.log("\n Exercise 2.a");
 primeLoop();
 
 const fiboLoop = () => {
@@ -87,35 +88,37 @@ const fiboLoop = () => {
     }
   }
 };
+console.log("\n Exercise 2.b");
 fiboLoop();
 
+console.log("\n Exercise 2.c");
 console.log(nestedData.innerData.order[1]);
 
-//#2. List of Books
+//#3. List of Books
 
 /*
-- Create an array of objects, where each object describes a book and has properties for the title(a string), author(a string),
+a - Create an array of objects, where each object describes a book and has properties for the title(a string), author(a string),
 and alreadyRead(a boolean indicating if you read it yet).
 
-- Iterate through the array of books.For each book, log the book title and book author like so:
+b - Iterate through the array of books.For each book, log the book title and book author like so:
 “The Hobbit by J.R.R.Tolkien”.
 
-- Now use an if/else statement to change the output depending on whether you read it yet or not. If you read it,
+c - Now use an if/else statement to change the output depending on whether you read it yet or not. If you read it,
 log a string like ‘You already read “The Hobbit” by J.R.R. Tolkien’, and if not,
 log a string like ‘You still need to read “The Lord of the Rings” by J.R.R. Tolkien.’
 */
 
-//#3. Easy one
+//#4. Easy one
 
 /*
-1 - Creating objects using the ‘new ’ keyword
-2 - Creating objects using literal notation
-3 - Creating objects using the object constructor
-4 - Adding properties to each object type
-5 - Adding methods to each object type
+a - Creating objects using the ‘new ’ keyword
+b - Creating objects using literal notation
+c - Creating objects using the object constructor
+d - Adding properties to each object type
+e - Adding methods to each object type
 */
 
-// 1. Objects with the new keyword
+//a. Objects with the new keyword
 
 const seasons = new Object();
 
@@ -125,9 +128,13 @@ seasons.fall = ["october", "november", "december"];
 seasons.winter = ["january", "february", "march"];
 seasons.total = 4;
 seasons.all = function() {
-  return seasons.winter, seasons.spring, seasons.summer, seasons.fall;
+  return `
+  ${seasons.winter},
+  ${seasons.spring}, 
+  ${seasons.summer},
+  ${seasons.fall}`;
 };
-
+console.log("\n Exercise 4.a");
 console.log(seasons.all());
 console.log(seasons.total);
 
@@ -147,7 +154,7 @@ const fruits = {
     ${fruits.spring}`;
   }
 };
-
+console.log("\n Exercise 4.b");
 console.log(fruits.list);
 console.log(fruits.allFruits());
 
@@ -156,9 +163,10 @@ console.log(fruits.allFruits());
 const mySon = {};
 Object.defineProperty(mySon, "firstName", { value: "Leon" });
 
+console.log("\n Exercise 4.c");
 console.log(mySon.firstName);
 
-//#4. Change this code to make it work:
+//#5. Change this code to make it work:
 
 const person = {
   firstName: "Dana",
@@ -192,13 +200,16 @@ const person4 = {
   age: 68,
   employed: true
 };
-
+console.log("\n Exercise 5.a");
 console.log(person.firstName);
 console.log(person.lastName);
 console.log(person.age);
 console.log(person.employed);
 
 const allPeople = [person, person1, person2, person3, person4];
+
+console.log("\n Exercise 5.a");
+console.log(allPeople);
 
 function withJob() {
   let result = 0;
@@ -210,6 +221,7 @@ function withJob() {
     return `There are ${result} people working.`;
   }
 }
+console.log("\n Exercise 5.b");
 console.log(withJob());
 
 function noJobOverThirty() {
@@ -223,10 +235,11 @@ function noJobOverThirty() {
   return `${result} are not working and over 30.`;
 }
 
+console.log("\n Exercise 5.c");
 console.log(noJobOverThirty());
 
 /*
-1 - Change what needed to ADD other more people to your array of objects, you need at lest 5 people
-2 - Find how many people has a job
-3 - Display only the people are over 35 and has no job
+a - Change what needed to ADD other more people to your array of objects, you need at lest 5 people
+b - Find how many people has a job
+c - Display only the people are over 35 and has no job
 */
