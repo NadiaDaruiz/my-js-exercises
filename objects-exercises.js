@@ -26,6 +26,44 @@ const nestedObject = {
   }
 };
 
+function addSpeaker(newSpeaker) {
+  nestedObject.speakers.push({ name: newSpeaker });
+}
+addSpeaker("Pedro");
+console.log("\n Exercise 1.a");
+console.log(nestedObject.speakers);
+
+const addLanguage = (newLanguage, newWord) => {
+  nestedObject.data.languages[newLanguage] = {
+    hello: newWord
+  };
+};
+addLanguage("german", "Hallo");
+console.log("\n Exercise 1.b");
+console.log(nestedObject.data.languages);
+
+const country = nestedObject.data.continents.europe.countries;
+
+function addCountry(newCountry, newCity, population) {
+  country[newCountry] = {
+    capital: newCity,
+    population: population
+  };
+}
+addCountry("Germany", "Berlin", 8400000);
+console.log("\n Exercise 1.c");
+console.log(country);
+
+// function addLanguage(newLanguage, newWord) {
+//   nestedObject.data.languages[newLanguage] = {
+//     hello: newWord
+//   };
+// }
+// addLanguage("german", "hallo");
+// console.log("\n Exercise 1.b");
+
+// console.log(nestedObject.data.languages);
+
 /*
 a - Write a function addSpeaker to add a speaker to the array of speakers.
 The speaker you add must be an object with a key of name and a value of whatever you’d like.
@@ -80,7 +118,7 @@ console.log("\n Exercise 2.a");
 primeLoop();
 
 const fiboLoop = () => {
-  fiboArray = nestedData.innerData.numberData.fibonnaci;
+  let fiboArray = nestedData.innerData.numberData.fibonnaci;
 
   for (let i = 0; i < fiboArray.length; i++) {
     if (fiboArray[i] % 2 === 0) {
@@ -107,6 +145,37 @@ c - Now use an if/else statement to change the output depending on whether you r
 log a string like ‘You already read “The Hobbit” by J.R.R. Tolkien’, and if not,
 log a string like ‘You still need to read “The Lord of the Rings” by J.R.R. Tolkien.’
 */
+
+console.log("\n Exercise 3");
+
+const myBooks = [
+  {
+    title: "El lobo estepario",
+    author: "Herman Hesse",
+    alreadyRead: false
+  },
+  {
+    title: "Las particulas elementales",
+    author: "Michael Houllebeque",
+    alreadyRead: true
+  },
+  {
+    title: "Alicia en el país de las maravillas",
+    author: "Lewis Carrol",
+    alreadyRead: false
+  }
+];
+
+for (let i = 0; i < myBooks.length; i++) {
+  let books = myBooks[i];
+  let bookInfo = books.title + " by " + books.author;
+
+  if (books.alreadyRead === true) {
+    console.log(`You already read ${bookInfo}`);
+  } else {
+    console.log(`You still need to read ${bookInfo}`);
+  }
+}
 
 //#4. Easy one
 

@@ -81,3 +81,19 @@ asterisk();
 //   *
 //  ***
 // *****
+
+const xmasTree = () => {
+  stars = "";
+  for (let i = 0; i < 3; i += 1) {
+    stars = "";
+    for (let j = 0; j < 3; j += 1) {
+      stars = "*";
+    }
+    for (let x = 0; x < 3; x += 1) {
+      stars = "*";
+    }
+    console.log(stars);
+  }
+};
+console.log("\nExercise 4");
+xmasTree();
